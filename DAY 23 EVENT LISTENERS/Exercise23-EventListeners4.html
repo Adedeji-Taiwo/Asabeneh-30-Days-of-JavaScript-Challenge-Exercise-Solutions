@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <title>Event Listeners 4 - Mouse Enter</title>
+        <meta charset = "utf-8">
+        <meta name = "viewport", content = "width= device-width, initial-scale = 1.0">
+    </head>
+    <body>
+        <button>Click Me</button>
+        
+        <script>
+            const button = document.querySelector("button")
+            button.addEventListener("mouseenter", e => {
+                console.log("e gives the event listeners object: ", e)
+                console.log("e.target gives the selected element: ", e.target)
+                console.log("e.target.textContent gives the content of the selected element")
+            })
+        </script>
+    </body>
+</html> 
