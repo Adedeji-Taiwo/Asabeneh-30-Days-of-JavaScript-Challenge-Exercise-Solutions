@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Event Listeners 9 - Input or Change Event</title>
+    </head>
+    <body>
+        <h1>Data Binding using input or change event</h1>
+        <!--How about if we want to get value without click the button. We can use the change or input event type to get data right away from the input field when the field is on focus. Let us see how we will handle that.-->
+        <input type = "text" placeholder="say something">
+        <p></p>
+
+
+        <script>
+            const input = document.querySelector("input");
+            const p = document.querySelector("p");
+
+            input.addEventListener("input", e => {
+                p.textContent = e.target.value
+            })
+        </script>
+    </body>
+</html>
+
+
