@@ -167,8 +167,8 @@ const catWeight = async () => {
         const response = await fetch(catAPI)
         const cats = await response.json()
         const plus = (cats.map(item => (item.weight.metric)))
-        const z = (plus.map(item => item.match(/\d/g)))  //extract all numbers in singleton arrays
-        console.log(z.map(item => item.reduce((acc, cur) => (parseInt(acc) + parseInt(cur))/2)))
+        const z = (plus.map(item => item.match(/\d+/gi).map(Number))  //extract all numbers in singleton arrays
+        console.log(z.map(item => item.reduce((acc, nt(acc) + parseInt(cur))/2)))
     } catch (err) {
         console.log(err)
     }
